@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$dist/default/production\serial_test.X.production.o
+$dist/default/debug\serial_test.X.debug.o
 cinit CODE 0 41 41 8 2 1
 idloc IDLOC 5 8000 8000 4 2 1
 maintext CODE 0 49 49 2C 2 1
@@ -19,9 +19,9 @@ cstackCOMMON COMMON 1 74 74 2 1 1
 intentry CODE 0 4 4 3B 2 1
 bssCOMMON COMMON 1 70 70 4 1 1
 config CONFIG 4 8007 8007 5 2 1
-$C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
+$C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
 idloc IDLOC 5 8000 8000 4 2 1
-reset_vec CODE 0 0 0 2 2 1
+reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 3F 3F 2 2 1
 config CONFIG 4 8007 8007 5 2 1
 # %UNUSED Section
@@ -44,9 +44,9 @@ BANK3 1A0-1EF 1
 BANK4 220-26F 1
 BANK5 2A0-2EF 1
 BANK6 320-32F 1
-CONST 2-3 2
+CONST 3-3 2
 CONST 75-FFF 2
-ENTRY 2-3 2
+ENTRY 3-3 2
 ENTRY 75-FFF 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -102,7 +102,7 @@ SFR60 1E00-1E6F 1
 SFR61 1E80-1EEF 1
 SFR62 1F00-1F6F 1
 SFR63 1F80-1FEF 1
-CODE 2-3 2
+CODE 3-3 2
 CODE 75-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -116,9 +116,9 @@ SFR8 400-46F 1
 SFR9 480-4EF 1
 BIGRAM 2000-21EF 1
 COMMON 76-7D 1
-STRCODE 2-3 2
+STRCODE 3-3 2
 STRCODE 75-FFF 2
-STRING 2-3 2
+STRING 3-3 2
 STRING 75-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -133,17 +133,17 @@ STRING 75-FFF 2
 # are in ascending order of addresses.
 # All other numeric values are in decimal.
 %LINETAB
-$dist/default/production\serial_test.X.production.o
-41 cinit CODE >478:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-41 cinit CODE >481:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-41 cinit CODE >502:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-42 cinit CODE >503:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-43 cinit CODE >504:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-44 cinit CODE >505:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-45 cinit CODE >511:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-45 cinit CODE >513:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-46 cinit CODE >514:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-47 cinit CODE >515:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
+$dist/default/debug\serial_test.X.debug.o
+41 cinit CODE >478:C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
+41 cinit CODE >481:C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
+41 cinit CODE >502:C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
+42 cinit CODE >503:C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
+43 cinit CODE >504:C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
+44 cinit CODE >505:C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
+45 cinit CODE >511:C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
+45 cinit CODE >513:C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
+46 cinit CODE >514:C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
+47 cinit CODE >515:C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
 4 intentry CODE >63:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
 4 intentry CODE >65:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
 6 intentry CODE >66:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
@@ -202,7 +202,7 @@ F intentry CODE >68:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-___latbits 1 0 ABS 0 - dist/default/production\serial_test.X.production.o
+___latbits 1 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
 __Hspace_0 75 0 ABS 0 - -
 __Hspace_1 76 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
@@ -210,41 +210,41 @@ __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10013 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-_BRGH 8F2 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_CREN 8EC 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_PEIE 5E 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_SPEN 8EF 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_SYNC 8F4 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_TXEN 8F5 0 ABS 0 - dist/default/production\serial_test.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-_data 72 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
-_main 92 0 CODE 0 maintext dist/default/production\serial_test.X.production.o
-btemp 7E 0 ABS 0 - dist/default/production\serial_test.X.production.o
-start 7E 0 CODE 0 init C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
+_BRGH 8F2 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_CREN 8EC 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_PEIE 5E 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_SPEN 8EF 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_SYNC 8F4 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_TXEN 8F5 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+___sp 0 0 STACK 2 stack C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
+_data 72 0 COMMON 1 bssCOMMON dist/default/debug\serial_test.X.debug.o
+_main 92 0 CODE 0 maintext dist/default/debug\serial_test.X.debug.o
+btemp 7E 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+start 7E 0 CODE 0 init C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
-wtemp0 7E 0 ABS 0 - dist/default/production\serial_test.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-___stacklo 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-start_initialization 82 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
-_OSCFRQ 893 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_RA5PPS 1F15 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_RC1REG 119 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_RX1PPS 1ECB 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_T0CON0 59E 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_T0CON1 59F 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_TX1REG 11A 0 ABS 0 - dist/default/production\serial_test.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
+___stackhi 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
+___stacklo 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
+start_initialization 82 0 CODE 0 cinit dist/default/debug\serial_test.X.debug.o
+_OSCFRQ 893 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_RA5PPS 1F15 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_RC1REG 119 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_RX1PPS 1ECB 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_T0CON0 59E 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_T0CON1 59F 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_TX1REG 11A 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+___int_sp 0 0 STACK 2 stack C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -467,17 +467,17 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-int$flags 7E 0 ABS 0 - dist/default/production\serial_test.X.production.o
+int$flags 7E 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_GIE 5F 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_ISR 8 0 CODE 0 intentry dist/default/production\serial_test.X.production.o
-_RA2 62 0 ABS 0 - dist/default/production\serial_test.X.production.o
+_GIE 5F 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_ISR 8 0 CODE 0 intentry dist/default/debug\serial_test.X.debug.o
+_RA2 62 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
 __S0 75 0 ABS 0 - -
 __S1 76 0 ABS 0 - -
-_enable 70 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
-__end_of_ISR 7E 0 CODE 0 intentry dist/default/production\serial_test.X.production.o
+_enable 70 0 COMMON 1 bssCOMMON dist/default/debug\serial_test.X.debug.o
+__end_of_ISR 7E 0 CODE 0 intentry dist/default/debug\serial_test.X.debug.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
 __Lbank10 0 0 BANK10 1 bank10 -
 __Lbank11 0 0 BANK11 1 bank11 -
 __Lbank12 0 0 BANK12 1 bank12 -
@@ -532,7 +532,7 @@ __Lbank60 0 0 BANK60 1 bank60 -
 __Lbank61 0 0 BANK61 1 bank61 -
 __Lbank62 0 0 BANK62 1 bank62 -
 __Lbank63 0 0 BANK63 1 bank63 -
-__pmaintext 92 0 CODE 0 maintext dist/default/production\serial_test.X.production.o
+__pmaintext 92 0 CODE 0 maintext dist/default/debug\serial_test.X.debug.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
@@ -541,41 +541,41 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
+__pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/debug\serial_test.X.debug.o
 __Lend_init 7E 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 8A 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
+end_of_initialization 8A 0 CODE 0 cinit dist/default/debug\serial_test.X.debug.o
 __Hintentry 7E 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
-__Hreset_vec 4 0 CODE 0 reset_vec -
+__Hreset_vec 6 0 CODE 0 reset_vec -
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-___heap_hi 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-___heap_lo 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-__end_of__initialization 8A 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
+___heap_lo 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.o
+__end_of__initialization 8A 0 CODE 0 cinit dist/default/debug\serial_test.X.debug.o
 __Lfunctab 0 0 ENTRY 0 functab -
-_SP1BRGH 11C 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_SP1BRGL 11B 0 ABS 0 - dist/default/production\serial_test.X.production.o
+_SP1BRGH 11C 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_SP1BRGL 11B 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 74 0 COMMON 1 cstackCOMMON dist/default/production\serial_test.X.production.o
+__pcstackCOMMON 74 0 COMMON 1 cstackCOMMON dist/default/debug\serial_test.X.debug.o
 __Hend_init 82 0 CODE 0 end_init -
-__end_of_main EA 0 CODE 0 maintext dist/default/production\serial_test.X.production.o
-_ANSA4 F9C4 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_BRG16 8FB 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_HFOEN 448E 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_RC1IE 38BC 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_RC1IF 386C 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_TMR0H 59D 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_TMR0L 59C 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_TRISA 12 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_TX1IE 38BB 0 ABS 0 - dist/default/production\serial_test.X.production.o
-_TX1IF 386B 0 ABS 0 - dist/default/production\serial_test.X.production.o
+__end_of_main EA 0 CODE 0 maintext dist/default/debug\serial_test.X.debug.o
+_ANSA4 F9C4 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_BRG16 8FB 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_HFOEN 448E 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_RC1IE 38BC 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_RC1IF 386C 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_TMR0H 59D 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_TMR0L 59C 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_TRISA 12 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_TX1IE 38BB 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
+_TX1IF 386B 0 ABS 0 - dist/default/debug\serial_test.X.debug.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__pintentry 8 0 CODE 0 intentry dist/default/production\serial_test.X.production.o
-__initialization 82 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
-_counter 71 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
+__pintentry 8 0 CODE 0 intentry dist/default/debug\serial_test.X.debug.o
+__initialization 82 0 CODE 0 cinit dist/default/debug\serial_test.X.debug.o
+_counter 71 0 COMMON 1 bssCOMMON dist/default/debug\serial_test.X.debug.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -602,7 +602,7 @@ _counter 71 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.productio
 # All other numeric quantities are in decimal.
 %SEGMENTS
 intentry 0 4 8 71 2
-reset_vec 0 0 0 2 2
+reset_vec 0 0 0 3 2
 bssCOMMON 1 70 70 6 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

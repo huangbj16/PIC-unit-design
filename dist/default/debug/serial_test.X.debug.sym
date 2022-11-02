@@ -356,7 +356,7 @@ __LbssCOMMON 0 0 ABS 0
 __pbssCOMMON 70 0 COMMON 1
 __Hend_init 41 0 CODE 0
 __Lend_init 3F 0 CODE 0
-__Hreset_vec 2 0 CODE 0
+__Hreset_vec 3 0 CODE 0
 __Lreset_vec 0 0 CODE 0
 intlevel0 0 0 ENTRY 0
 intlevel1 0 0 ENTRY 0
@@ -373,12 +373,12 @@ __Lmaintext 0 0 ABS 0
 __pmaintext 49 0 CODE 0
 __initialization 41 0 CODE 0
 %segments
-reset_vec 0 3 CODE 0 0
+reset_vec 0 5 CODE 0 0
 intentry 8 E9 CODE 8 0
 bssCOMMON 70 75 COMMON 70 1
 %locals
-dist/default/production\serial_test.X.production.o
-C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
+dist/default/debug\serial_test.X.debug.o
+C:\Users\bingjian\AppData\Local\Temp\xcAsp5s.s
 478 41 0 CODE 0
 481 41 0 CODE 0
 502 41 0 CODE 0
