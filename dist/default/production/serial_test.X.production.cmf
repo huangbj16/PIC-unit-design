@@ -12,17 +12,17 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\serial_test.X.production.o
-cinit CODE 0 41 41 8 2 1
+cinit CODE 0 62 62 B 2 1
 idloc IDLOC 5 8000 8000 4 2 1
-maintext CODE 0 49 49 2C 2 1
-cstackCOMMON COMMON 1 74 74 2 1 1
-intentry CODE 0 4 4 3B 2 1
-bssCOMMON COMMON 1 70 70 4 1 1
+maintext CODE 0 6D 6D 33 2 1
+cstackCOMMON COMMON 1 77 77 1 1 1
+intentry CODE 0 4 4 5C 2 1
+bssCOMMON COMMON 1 70 70 7 1 1
 config CONFIG 4 8007 8007 5 2 1
-$C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
+$C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
 idloc IDLOC 5 8000 8000 4 2 1
 reset_vec CODE 0 0 0 2 2 1
-end_init CODE 0 3F 3F 2 2 1
+end_init CODE 0 60 60 2 2 1
 config CONFIG 4 8007 8007 5 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -45,9 +45,9 @@ BANK4 220-26F 1
 BANK5 2A0-2EF 1
 BANK6 320-32F 1
 CONST 2-3 2
-CONST 75-FFF 2
+CONST A0-FFF 2
 ENTRY 2-3 2
-ENTRY 75-FFF 2
+ENTRY A0-FFF 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
 SFR12 600-66F 1
@@ -103,7 +103,7 @@ SFR61 1E80-1EEF 1
 SFR62 1F00-1F6F 1
 SFR63 1F80-1FEF 1
 CODE 2-3 2
-CODE 75-FFF 2
+CODE A0-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -115,11 +115,11 @@ SFR7 380-3EF 1
 SFR8 400-46F 1
 SFR9 480-4EF 1
 BIGRAM 2000-21EF 1
-COMMON 76-7D 1
+COMMON 78-7D 1
 STRCODE 2-3 2
-STRCODE 75-FFF 2
+STRCODE A0-FFF 2
 STRING 2-3 2
-STRING 75-FFF 2
+STRING A0-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -134,62 +134,76 @@ STRING 75-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\serial_test.X.production.o
-41 cinit CODE >478:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-41 cinit CODE >481:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-41 cinit CODE >502:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-42 cinit CODE >503:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-43 cinit CODE >504:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-44 cinit CODE >505:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-45 cinit CODE >511:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-45 cinit CODE >513:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-46 cinit CODE >514:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-47 cinit CODE >515:C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.s
-4 intentry CODE >63:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-4 intentry CODE >65:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-6 intentry CODE >66:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-A intentry CODE >67:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-F intentry CODE >68:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-12 intentry CODE >69:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-14 intentry CODE >70:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-19 intentry CODE >71:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-1E intentry CODE >73:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-1F intentry CODE >75:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-20 intentry CODE >76:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-21 intentry CODE >78:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-23 intentry CODE >79:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-28 intentry CODE >80:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-2A intentry CODE >86:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-2A intentry CODE >87:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-32 intentry CODE >88:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-37 intentry CODE >89:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-3A intentry CODE >90:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-3B intentry CODE >91:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-3D intentry CODE >99:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-49 maintext CODE >20:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-49 maintext CODE >22:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-4C maintext CODE >23:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-4D maintext CODE >24:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-52 maintext CODE >25:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-53 maintext CODE >28:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-56 maintext CODE >29:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-58 maintext CODE >30:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-5A maintext CODE >31:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-5B maintext CODE >33:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-5C maintext CODE >34:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-5D maintext CODE >39:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-5F maintext CODE >40:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-60 maintext CODE >41:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-61 maintext CODE >42:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-63 maintext CODE >43:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-66 maintext CODE >44:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-69 maintext CODE >45:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-6B maintext CODE >46:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-6D maintext CODE >47:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-6E maintext CODE >49:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-6F maintext CODE >50:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-70 maintext CODE >51:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-72 maintext CODE >54:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
-72 maintext CODE >60:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+62 cinit CODE >489:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+62 cinit CODE >492:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+62 cinit CODE >519:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+63 cinit CODE >520:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+64 cinit CODE >521:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+65 cinit CODE >522:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+66 cinit CODE >523:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+67 cinit CODE >524:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+68 cinit CODE >525:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+69 cinit CODE >531:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+69 cinit CODE >533:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+6A cinit CODE >534:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+6B cinit CODE >535:C:\Users\bingjian\AppData\Local\Temp\xcAsbug.s
+4 intentry CODE >68:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+4 intentry CODE >70:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+6 intentry CODE >72:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+B intentry CODE >73:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+E intentry CODE >74:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+10 intentry CODE >75:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+15 intentry CODE >76:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+1A intentry CODE >78:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+1E intentry CODE >79:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+1F intentry CODE >81:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+20 intentry CODE >82:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+21 intentry CODE >84:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+23 intentry CODE >85:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+28 intentry CODE >86:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+2A intentry CODE >92:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+2A intentry CODE >93:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+32 intentry CODE >94:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+37 intentry CODE >95:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+3A intentry CODE >96:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+3B intentry CODE >97:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+3D intentry CODE >101:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+47 intentry CODE >102:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+48 intentry CODE >103:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+50 intentry CODE >104:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+58 intentry CODE >105:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+5C intentry CODE >106:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+5E intentry CODE >108:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+6D maintext CODE >22:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+6D maintext CODE >24:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+70 maintext CODE >25:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+71 maintext CODE >26:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+76 maintext CODE >27:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+77 maintext CODE >28:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+78 maintext CODE >29:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+7A maintext CODE >30:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+7B maintext CODE >33:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+7E maintext CODE >34:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+80 maintext CODE >35:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+82 maintext CODE >36:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+83 maintext CODE >38:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+84 maintext CODE >39:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+85 maintext CODE >40:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+87 maintext CODE >41:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+88 maintext CODE >44:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+8A maintext CODE >45:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+8B maintext CODE >46:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+8C maintext CODE >47:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+8E maintext CODE >48:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+91 maintext CODE >49:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+94 maintext CODE >50:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+96 maintext CODE >51:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+98 maintext CODE >52:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+99 maintext CODE >54:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+9A maintext CODE >55:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+9B maintext CODE >56:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+9D maintext CODE >59:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+9D maintext CODE >65:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -203,8 +217,8 @@ F intentry CODE >68:C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 1 0 ABS 0 - dist/default/production\serial_test.X.production.o
-__Hspace_0 75 0 ABS 0 - -
-__Hspace_1 76 0 ABS 0 - -
+__Hspace_0 A0 0 ABS 0 - -
+__Hspace_1 78 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10013 0 ABS 0 - -
@@ -216,35 +230,38 @@ _PEIE 5E 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _SPEN 8EF 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _SYNC 8F4 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _TXEN 8F5 0 ABS 0 - dist/default/production\serial_test.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-_data 72 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
-_main 92 0 CODE 0 maintext dist/default/production\serial_test.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
+_data 75 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
+_flip 72 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
+_main DA 0 CODE 0 maintext dist/default/production\serial_test.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\serial_test.X.production.o
-start 7E 0 CODE 0 init C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
+start C0 0 CODE 0 init C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\serial_test.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-___stacklo 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-start_initialization 82 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
+___stacklo 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
+start_initialization C4 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
 _OSCFRQ 893 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _RA5PPS 1F15 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _RC1REG 119 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _RX1PPS 1ECB 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _T0CON0 59E 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _T0CON1 59F 0 ABS 0 - dist/default/production\serial_test.X.production.o
+_TMR0IE 38B5 0 ABS 0 - dist/default/production\serial_test.X.production.o
+_TMR0IF 3865 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _TX1REG 11A 0 ABS 0 - dist/default/production\serial_test.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
+___int_sp 0 0 STACK 2 stack C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -255,7 +272,7 @@ __Hbank6 0 0 ABS 0 bank6 -
 __Hbank7 0 0 BANK7 1 bank7 -
 __Hbank8 0 0 BANK8 1 bank8 -
 __Hbank9 0 0 BANK9 1 bank9 -
-__Hcinit 92 0 CODE 0 cinit -
+__Hcinit DA 0 CODE 0 cinit -
 __Hidloc 10008 0 IDLOC 5 idloc -
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -380,7 +397,7 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 BANK7 1 bank7 -
 __Lbank8 0 0 BANK8 1 bank8 -
 __Lbank9 0 0 BANK9 1 bank9 -
-__Lcinit 82 0 CODE 0 cinit -
+__Lcinit C4 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 5 idloc -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -440,7 +457,7 @@ __Lstack 0 0 STACK 2 stack -
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hheap 0 0 HEAP 7 heap -
-__Hinit 7E 0 CODE 0 init -
+__Hinit C0 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -455,7 +472,7 @@ __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
 __Lheap 0 0 HEAP 7 heap -
-__Linit 7E 0 CODE 0 init -
+__Linit C0 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
@@ -471,13 +488,14 @@ int$flags 7E 0 ABS 0 - dist/default/production\serial_test.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _ISR 8 0 CODE 0 intentry dist/default/production\serial_test.X.production.o
-_RA2 62 0 ABS 0 - dist/default/production\serial_test.X.production.o
-__S0 75 0 ABS 0 - -
-__S1 76 0 ABS 0 - -
-_enable 70 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
-__end_of_ISR 7E 0 CODE 0 intentry dist/default/production\serial_test.X.production.o
+_RA0 60 0 ABS 0 - dist/default/production\serial_test.X.production.o
+_RA1 61 0 ABS 0 - dist/default/production\serial_test.X.production.o
+__S0 A0 0 ABS 0 - -
+__S1 78 0 ABS 0 - -
+_enable 73 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
+__end_of_ISR C0 0 CODE 0 intentry dist/default/production\serial_test.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
 __Lbank10 0 0 BANK10 1 bank10 -
 __Lbank11 0 0 BANK11 1 bank11 -
 __Lbank12 0 0 BANK12 1 bank12 -
@@ -532,7 +550,7 @@ __Lbank60 0 0 BANK60 1 bank60 -
 __Lbank61 0 0 BANK61 1 bank61 -
 __Lbank62 0 0 BANK62 1 bank62 -
 __Lbank63 0 0 BANK63 1 bank63 -
-__pmaintext 92 0 CODE 0 maintext dist/default/production\serial_test.X.production.o
+__pmaintext DA 0 CODE 0 maintext dist/default/production\serial_test.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
@@ -542,25 +560,28 @@ __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
 __pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
-__Lend_init 7E 0 CODE 0 end_init -
+__Lend_init C0 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 8A 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
-__Hintentry 7E 0 CODE 0 intentry -
+_countdown_timer 70 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
+end_of_initialization D2 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
+__Hintentry C0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-___heap_hi 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-___heap_lo 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsa5k.o
-__end_of__initialization 8A 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
+___heap_lo 0 0 ABS 0 - C:\Users\bingjian\AppData\Local\Temp\xcAsbug.o
+__end_of__initialization D2 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 _SP1BRGH 11C 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _SP1BRGL 11B 0 ABS 0 - dist/default/production\serial_test.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 74 0 COMMON 1 cstackCOMMON dist/default/production\serial_test.X.production.o
-__Hend_init 82 0 CODE 0 end_init -
-__end_of_main EA 0 CODE 0 maintext dist/default/production\serial_test.X.production.o
+__pcstackCOMMON 77 0 COMMON 1 cstackCOMMON dist/default/production\serial_test.X.production.o
+__Hend_init C4 0 CODE 0 end_init -
+__end_of_main 140 0 CODE 0 maintext dist/default/production\serial_test.X.production.o
+_ANSA0 F9C0 0 ABS 0 - dist/default/production\serial_test.X.production.o
+_ANSA1 F9C1 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _ANSA4 F9C4 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _BRG16 8FB 0 ABS 0 - dist/default/production\serial_test.X.production.o
 _HFOEN 448E 0 ABS 0 - dist/default/production\serial_test.X.production.o
@@ -574,8 +595,7 @@ _TX1IF 386B 0 ABS 0 - dist/default/production\serial_test.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __pintentry 8 0 CODE 0 intentry dist/default/production\serial_test.X.production.o
-__initialization 82 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
-_counter 71 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.production.o
+__initialization C4 0 CODE 0 cinit dist/default/production\serial_test.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -601,9 +621,9 @@ _counter 71 0 COMMON 1 bssCOMMON dist/default/production\serial_test.X.productio
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-intentry 0 4 8 71 2
+intentry 0 4 8 9C 2
 reset_vec 0 0 0 2 2
-bssCOMMON 1 70 70 6 1
+bssCOMMON 1 70 70 8 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

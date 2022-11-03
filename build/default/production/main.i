@@ -4813,24 +4813,29 @@ uint8_t temp = 0;
 unsigned char data = 0;
 uint8_t counter = 0;
 uint8_t enable = 0;
+uint8_t flip = 0;
+uint16_t countdown_timer = 0;
 
 void main(void) {
 
     OSCFRQ = 0x02;
     HFOEN = 1;
-    TRISA &= (0b11111011);
-    RA2 = 0;
+    TRISA &= (0b11111100);
+    RA1 = 0;
+    RA0 = 0;
+    ANSA1 = 0;
+    ANSA0 = 0;
 
 
     T0CON0 = (0b10000000);
-    T0CON1 = (0b01000000);
-    TMR0H = (0xFF);
-    TMR0L = (0x00);
+    T0CON1 = (0b01000101);
+    TMR0H = 91;
+    TMR0L = 0;
 
     GIE = 1;
     PEIE = 1;
-
-
+    TMR0IE = 1;
+    TMR0IF = 0;
 
 
     BRGH = 1;
@@ -4860,13 +4865,14 @@ void main(void) {
 }
 
 void __attribute__((picinterrupt(("")))) ISR(void) {
-    counter++;
+
     if(RC1IF == 1){
         data = RC1REG;
         RC1IF = 0;
         if(data == 0xFF){
             if(enable == 1){
 
+                countdown_timer = 340;
                 enable = 0;
             }
             TX1IE = 1;
@@ -4889,8 +4895,11 @@ void __attribute__((picinterrupt(("")))) ISR(void) {
         }
     }
 
-
-
-
-
+    if(TMR0IF == 1 && countdown_timer != 0){
+        flip = ~flip;
+        RA1 = flip;
+        RA0 = ~flip;
+        countdown_timer--;
+        TMR0IF = 0;
+    }
 }

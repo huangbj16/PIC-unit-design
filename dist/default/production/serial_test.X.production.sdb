@@ -7,9 +7,9 @@
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 D:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"20 C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+"22 C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"65
+"70
 [v _ISR ISR `II(v  1 e 1 0 ]
 "497 D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f15214.h
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
@@ -35,6 +35,10 @@
 [v _RX1PPS RX1PPS `VEuc  1 e 1 @7883 ]
 "6971
 [v _RA5PPS RA5PPS `VEuc  1 e 1 @7957 ]
+"7880
+[v _ANSA0 ANSA0 `VEb  1 e 0 @63936 ]
+"7883
+[v _ANSA1 ANSA1 `VEb  1 e 0 @63937 ]
 "7889
 [v _ANSA4 ANSA4 `VEb  1 e 0 @63940 ]
 "7916
@@ -49,8 +53,10 @@
 [v _HFOEN HFOEN `VEb  1 e 0 @17550 ]
 "8465
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
-"8540
-[v _RA2 RA2 `VEb  1 e 0 @98 ]
+"8498
+[v _RA0 RA0 `VEb  1 e 0 @96 ]
+"8519
+[v _RA1 RA1 `VEb  1 e 0 @97 ]
 "8606
 [v _RC1IE RC1IE `VEb  1 e 0 @14524 ]
 "8609
@@ -59,6 +65,10 @@
 [v _SPEN SPEN `VEb  1 e 0 @2287 ]
 "8870
 [v _SYNC SYNC `VEb  1 e 0 @2292 ]
+"9140
+[v _TMR0IE TMR0IE `VEb  1 e 0 @14517 ]
+"9143
+[v _TMR0IF TMR0IF `VEb  1 e 0 @14437 ]
 "9326
 [v _TX1IE TX1IE `VEb  1 e 0 @14523 ]
 "9329
@@ -67,17 +77,19 @@
 [v _TXEN TXEN `VEb  1 e 0 @2293 ]
 "16 C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
 [v _data data `uc  1 e 1 0 ]
-"17
-[v _counter counter `uc  1 e 1 0 ]
 "18
 [v _enable enable `uc  1 e 1 0 ]
+"19
+[v _flip flip `uc  1 e 1 0 ]
 "20
+[v _countdown_timer countdown_timer `us  1 e 2 0 ]
+"22
 [v _main main `(v  1 e 1 0 ]
 {
-"63
+"68
 } 0
-"65
+"70
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"99
+"108
 } 0

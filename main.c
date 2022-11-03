@@ -16,30 +16,35 @@ uint8_t temp = 0;
 unsigned char data = 0;
 uint8_t counter = 0;
 uint8_t enable = 0;
+uint8_t flip = 0;
+uint16_t countdown_timer = 0;
 
 void main(void) {
     //set internal oscillator to 4MHz
     OSCFRQ = 0x02;
     HFOEN = 1;
-    TRISA &= (0b11111011);
-    RA2 = 0;
+    TRISA &= (0b11111100);
+    RA1 = 0;
+    RA0 = 0;
+    ANSA1 = 0;
+    ANSA0 = 0;
     
     //setup timer0 = 1MHz for interrupt
     T0CON0 = (0b10000000);
-    T0CON1 = (0b01000000);
-    TMR0H = (0xFF);
-    TMR0L = (0x00);
+    T0CON1 = (0b01000101);//sync clock, 32 prescale
+    TMR0H = 91;
+    TMR0L = 0;
     //setup interrupt
     GIE = 1;
     PEIE = 1;
-//    TMR0IE = 1;
-//    TMR0IF = 0;
+    TMR0IE = 1;
+    TMR0IF = 0;
     
     //setup EUSART, async
     BRGH = 1;
     BRG16 = 0;
     SP1BRGH = 0;
-    SP1BRGL = 25;//10417 baud rate with 0% error
+    SP1BRGL = 25;//10417 baud rate with 0%    error
     RA5PPS = 0x05;//set RA5 as TX output
     RX1PPS = 0x04;//set RA4 as RC input
     ANSA4 = 0;
@@ -63,13 +68,14 @@ void main(void) {
 }
 
 void __interrupt() ISR(void) {
-    counter++;
+    // serial processing
     if(RC1IF == 1){
         data = RC1REG;
         RC1IF = 0;
         if(data == 0xFF){
             if(enable == 1){
                 //start trigger motor
+                countdown_timer = 340;
                 enable = 0;//reset state
             }
             TX1IE = 1;
@@ -91,9 +97,12 @@ void __interrupt() ISR(void) {
             TX1IE = 0;//disable writing
         }
     }
-//    if(TMR0IF == 1){
-//        temp = 1-temp;
-//        RA5 = temp;
-//        TMR0IF = 0;
-//    }
+    // square wave generator                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ator
+    if(TMR0IF == 1 && countdown_timer != 0){
+        flip = ~flip;
+        RA1 = flip;
+        RA0 = ~flip;
+        countdown_timer--;
+        TMR0IF = 0;
+    }
 }
