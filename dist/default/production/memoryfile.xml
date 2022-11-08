@@ -3,15 +3,15 @@
   <executable name="dist/default/production\serial_test.X.production.hex">
     <memory name="program">
       <units>words</units>
-      <length>4096</length>
-      <used>158</used>
-      <free>3938</free>
+      <length>2048</length>
+      <used>161</used>
+      <free>1887</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
-      <length>512</length>
+      <length>256</length>
       <used>10</used>
-      <free>502</free>
+      <free>246</free>
     </memory>
   </executable>
 </project>

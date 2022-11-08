@@ -1,81 +1,89 @@
 [p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
 [d version 1.1 ]
 [d edition pro ]
-[d chip 16F15214 ]
+[d chip 16F18313 ]
 [d frameptr 6 ]
 "10 D:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 D:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"22 C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+"6 D:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"22 C:\Users\bingjian\MPLABXProjects\serial_test.X\main_18313.c
 [v _main main `(v  1 e 1 0 ]
-"70
+"72
 [v _ISR ISR `II(v  1 e 1 0 ]
-"497 D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f15214.h
-[v _TRISA TRISA `VEuc  1 e 1 @18 ]
-"820
-[v _RC1REG RC1REG `VEuc  1 e 1 @281 ]
-"840
-[v _TX1REG TX1REG `VEuc  1 e 1 @282 ]
-"867
-[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @283 ]
-"887
-[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
-"4088
-[v _TMR0L TMR0L `VEuc  1 e 1 @1436 ]
-"4226
-[v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
-"4480
-[v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
-"4578
-[v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
-"5522
-[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
-"6355
-[v _RX1PPS RX1PPS `VEuc  1 e 1 @7883 ]
-"6971
-[v _RA5PPS RA5PPS `VEuc  1 e 1 @7957 ]
-"7880
-[v _ANSA0 ANSA0 `VEb  1 e 0 @63936 ]
-"7883
-[v _ANSA1 ANSA1 `VEb  1 e 0 @63937 ]
-"7889
-[v _ANSA4 ANSA4 `VEb  1 e 0 @63940 ]
-"7916
-[v _BRG16 BRG16 `VEb  1 e 0 @2299 ]
-"7919
-[v _BRGH BRGH `VEb  1 e 0 @2290 ]
-"8072
-[v _CREN CREN `VEb  1 e 0 @2284 ]
-"8138
+"635 D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18313.h
+[v _TMR0L TMR0L `VEuc  1 e 1 @21 ]
+"773
+[v _TMR0H TMR0H `VEuc  1 e 1 @22 ]
+"1027
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @23 ]
+"1092
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @24 ]
+"1469
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"2494
+[v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"2548
+[v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"2609
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @411 ]
+"2679
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @412 ]
+"9075
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2329 ]
+"9416
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2335 ]
+"10158
+[v _RXPPS RXPPS `VEuc  1 e 1 @3620 ]
+"10678
+[v _RA5PPS RA5PPS `VEuc  1 e 1 @3733 ]
+"13130
+[v _ANSA0 ANSA0 `VEb  1 e 0 @3168 ]
+"13133
+[v _ANSA1 ANSA1 `VEb  1 e 0 @3169 ]
+"13139
+[v _ANSA4 ANSA4 `VEb  1 e 0 @3172 ]
+"13142
+[v _ANSA5 ANSA5 `VEb  1 e 0 @3173 ]
+"13169
+[v _BRG16 BRG16 `VEb  1 e 0 @3323 ]
+"13172
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"13529
+[v _CREN CREN `VEb  1 e 0 @3308 ]
+"13907
 [v _GIE GIE `VEb  1 e 0 @95 ]
-"8183
-[v _HFOEN HFOEN `VEb  1 e 0 @17550 ]
-"8465
+"13928
+[v _HFOEN HFOEN `VEb  1 e 0 @18670 ]
+"14813
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
-"8498
+"14945
 [v _RA0 RA0 `VEb  1 e 0 @96 ]
-"8519
+"14963
 [v _RA1 RA1 `VEb  1 e 0 @97 ]
-"8606
-[v _RC1IE RC1IE `VEb  1 e 0 @14524 ]
-"8609
-[v _RC1IF RC1IF `VEb  1 e 0 @14444 ]
-"8741
-[v _SPEN SPEN `VEb  1 e 0 @2287 ]
-"8870
-[v _SYNC SYNC `VEb  1 e 0 @2292 ]
-"9140
-[v _TMR0IE TMR0IE `VEb  1 e 0 @14517 ]
-"9143
-[v _TMR0IF TMR0IF `VEb  1 e 0 @14437 ]
-"9326
-[v _TX1IE TX1IE `VEb  1 e 0 @14523 ]
-"9329
-[v _TX1IF TX1IF `VEb  1 e 0 @14443 ]
-"9338
-[v _TXEN TXEN `VEb  1 e 0 @2293 ]
-"16 C:\Users\bingjian\MPLABXProjects\serial_test.X\main.c
+"15044
+[v _RCIE RCIE `VEb  1 e 0 @1165 ]
+"15047
+[v _RCIF RCIF `VEb  1 e 0 @141 ]
+"15140
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"15308
+[v _SYNC SYNC `VEb  1 e 0 @3316 ]
+"15503
+[v _TMR0IE TMR0IE `VEb  1 e 0 @1157 ]
+"15506
+[v _TMR0IF TMR0IF `VEb  1 e 0 @133 ]
+"15581
+[v _TXEN TXEN `VEb  1 e 0 @3317 ]
+"15584
+[v _TXIE TXIE `VEb  1 e 0 @1164 ]
+"15587
+[v _TXIF TXIF `VEb  1 e 0 @140 ]
+"16 C:\Users\bingjian\MPLABXProjects\serial_test.X\main_18313.c
 [v _data data `uc  1 e 1 0 ]
 "18
 [v _enable enable `uc  1 e 1 0 ]
@@ -86,10 +94,10 @@
 "22
 [v _main main `(v  1 e 1 0 ]
 {
-"68
-} 0
 "70
+} 0
+"72
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"108
+"110
 } 0

@@ -7,8 +7,8 @@
 
 
 #include <xc.h>
-#include "config.h"
-#include <pic16f15214.h>
+#include "config_18313.h"
+#include <pic16f18313.h>
 
 #define _XTAL_FREQ 4000000
 
@@ -21,7 +21,8 @@ uint16_t countdown_timer = 0;
 
 void main(void) {
     //set internal oscillator to 4MHz
-    OSCFRQ = 0x02;
+    OSCCON1 = 0x60;
+    OSCFRQ = 0x03;
     HFOEN = 1;
     TRISA &= (0b11111100);
     RA1 = 0;
@@ -44,17 +45,18 @@ void main(void) {
     BRGH = 1;
     BRG16 = 0;
     SP1BRGH = 0;
-    SP1BRGL = 25;//10417 baud rate with 0%    error
-    RA5PPS = 0x05;//set RA5 as TX output
-    RX1PPS = 0x04;//set RA4 as RC input
+    SP1BRGL = 25;//9600 baud rate with 0.16% error
+    RA5PPS = 0x14;//set RA5 as TX output
+    RXPPS = 0x04;//set RA4 as RC input
     ANSA4 = 0;
+    ANSA5 = 0;
     SYNC = 0;
     SPEN = 1;
     //set interrupt for write
     TXEN = 1;
     CREN = 1;
-    RC1IE = 1;
-//    TX1IE = 1;
+    RCIE = 1;
+//    TXIE = 1;
     
     while(1){
 //        if(OERR == 1){
@@ -69,16 +71,16 @@ void main(void) {
 
 void __interrupt() ISR(void) {
     // serial processing
-    if(RC1IF == 1){
+    if(RCIF == 1){
         data = RC1REG;
-        RC1IF = 0;
+        RCIF = 0;
         if(data == 0xFF){
             if(enable == 1){
                 //start trigger motor
                 countdown_timer = 340;
                 enable = 0;//reset state
             }
-            TX1IE = 1;
+            TXIE = 1;
         }
         else{
             data--;
@@ -86,15 +88,15 @@ void __interrupt() ISR(void) {
                 enable = 1;//command to enable current board
             }
             else{
-                TX1IE = 1;//enable writing, send to next
+                TXIE = 1;//enable writing, send to next
             }
         }
     }
-    if(TX1IF == 1 && TX1IE == 1){// write new data to TX1REG
+    if(TXIF == 1 && TXIE == 1){// write new data to TX1REG
         if(data != 0){
             TX1REG = data;
             data = 0;
-            TX1IE = 0;//disable writing
+            TXIE = 0;//disable writing
         }
     }
     // square wave generator                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ator
